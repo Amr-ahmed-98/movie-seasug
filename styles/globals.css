@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+main,
+.search-page,
+.suggest-page {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(138, 7, 7, 1) 50%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+main h1 {
+  font-family: 'Caveat', latin;
+}
+.btn-search {
+  left: 35rem;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn-suggest {
+    left: calc(50% + 10rem);
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .edit-card {
+    @apply w-[70%] -translate-x-48;
+  }
+}
+@media (min-width: 500px) and (max-width: 576px) {
+  .edit-title {
+    @apply text-xl font-mono whitespace-nowrap;
+  }
+  .figure-hidden {
+    @apply hidden;
+  }
+  .edit-image {
+    width: 100px;
+  }
+}
+.edit-image {
+  width: 600px;
+}
