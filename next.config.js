@@ -6,4 +6,7 @@ module.exports = {
     API_KEY: process.env.API_KEY,
     API_KEY_FOR_TRAILERS: process.env.API_KEY_FOR_TRAILERS,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };

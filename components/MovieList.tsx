@@ -1,5 +1,9 @@
 'use client';
-import { getMovieId, getMovieTrailer, searchedData } from '@/app/api/route';
+import {
+  searchedData,
+  getMovieId,
+  getMovieTrailer,
+} from '@/app/searchMovie/route';
 import { useEffect, useState } from 'react';
 import { FaImdb } from 'react-icons/fa';
 import { SiRottentomatoes } from 'react-icons/si';
@@ -22,9 +26,9 @@ interface Props {
 
 const MovieList = ({ form_title }: Props) => {
   const [data, setData] = useState<DataType | null>(null);
-  const [trailer, setTrailer] = useState<string>(String);
+  const [trailer, setTrailer] = useState<string>('');
   useEffect(() => {
-    searchedData(form_title).then((data) => {
+    searchedData(form_title).then((data: DataType) => {
       setData({
         Poster: data?.Poster,
         Title: data?.Title,

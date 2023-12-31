@@ -2,7 +2,7 @@
 
 import { useContext, useEffect, useState } from 'react';
 import UserDataContext from '../contexts/UserDataContext';
-import { actorId, suggestedMovie } from '../api/route';
+import { actorId, suggestedMovie } from '../suggestMovie/route';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 
 import Link from 'next/link';
