@@ -16,7 +16,7 @@ interface Data {
 //-------------- search for movies---------------------------
 export const searchedData: Data = async (title) => {
   const searchedTitles = await fetch(
-    `http://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=${title}`
+    `https://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=${title}`
   );
   const data = await searchedTitles.json();
   return data;
